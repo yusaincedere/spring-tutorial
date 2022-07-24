@@ -1,8 +1,15 @@
 package com.example.demo.models;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table
 public class Student {
+    @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY
+    )
     private long id;
     private String name;
     private String email;
